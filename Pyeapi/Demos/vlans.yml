@@ -1,0 +1,23 @@
+---
+devices:
+  - a-spine1
+  - a-spine2
+  - a-leaf1
+  - a-leaf2
+  - a-leaf3
+  - a-leaf4
+  - a-host1
+  - a-host2
+vlan_list:
+  - id: 100
+    name: "DMZ"
+  - id: 200
+    name: "MGMT"
+  - id: 300
+    name: "VM-DEV"
+  - id: 400
+    name: "VM-PROD"
+  - id: 500
+    name: "VM-TEST"
+  - id: 600
+    name: "VM-DEV"
