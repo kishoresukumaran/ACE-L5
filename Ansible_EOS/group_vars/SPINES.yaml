@@ -1,0 +1,14 @@
+---
+global_vlans:
+  - id: 700
+    name: SEVEN_HUNDRED
+  - id: 800
+    name: EIGHT_HUNDRED
+  - id: 900
+    name: NINE_HUNDRED
+  - id: 1000
+    name: TEN_HUNDRED
+  - id: 1100
+    name: ELEVEN_HUNDRED
+  - id: 1200
+    name: TWELVE_HUNDRED

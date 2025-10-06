@@ -1,0 +1,35 @@
+---
+all:
+  children:
+    SPINES:
+      hosts:
+        a-spine1:
+          ansible_host: 172.20.20.66
+        a-spine2:
+          ansible_host: 172.20.20.65
+    LEAFS:
+      hosts:
+        a-leaf1:
+          ansible_host: 172.20.20.67
+        a-leaf2:
+          ansible_host: 172.20.20.68
+        a-leaf3:
+          ansible_host: 172.20.20.69
+        a-leaf4:
+          ansible_host: 172.20.20.62
+    HOSTS:
+      hosts:
+        a-host1:
+          ansible_host: 172.20.20.30
+        a-host2:
+          ansible_host: 172.20.20.64
+  vars:
+    ansible_user: admin
+    ansible_password: admin
+    ansible_network_os: eos
+    ansible_connection: httpapi
+    ansible_httpapi_use_ssl: True
+    ansible_httpapi_validate_certs: False
+    ansible_httpapi_port: 443
+    ansible_become: true
+    ansible_become_method: enable
