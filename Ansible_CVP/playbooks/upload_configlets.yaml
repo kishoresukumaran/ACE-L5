@@ -1,0 +1,10 @@
+---
+- name: Playbook for uploading configlets to CVP
+  hosts: cvp1
+  vars_files:
+    - ../vars/cvp_model.yaml
+  tasks:
+    - name: Upload configlets to CVP
+      arista.cvp.cv_configlet_v3:
+        configlets: "{{ CVP_CONFIGLETS }}"
+        state: present
