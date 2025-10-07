@@ -1,0 +1,9 @@
+---
+- name: Playbook for creating containers in CVP
+  hosts: cvp1
+  vars_files:
+    - ../vars/cvp_model.yaml
+  tasks:
+    - name: create containers in cvp
+      arista.cvp.cv_container_v3:
+        topology: "{{ CVP_CONTAINERS }}"

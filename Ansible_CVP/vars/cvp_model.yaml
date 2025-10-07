@@ -5,3 +5,13 @@ CVP_CONFIGLETS:
   Alias_test: "alias ship show ip interface brief"
   Leafs_intf_desc: "{{ lookup('file', '{{path}}/configlets/leafs.cfg') }}"
   Spines_intf_desc: "{{ lookup('file', '{{path}}/configlets/spines.cfg') }}"
+
+CVP_CONTAINERS:
+  DC1:
+    parentContainerName: Tenant
+    configlets:
+      - Leafs_intf_desc
+  DC2:
+    parentContainerName: Tenant
+    configlets:
+      - Spines_intf_desc
